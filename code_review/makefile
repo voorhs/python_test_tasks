@@ -2,5 +2,6 @@ SHELL = /bin/bash
 
 test: 
 	docker build -t code_review .
-	docker run --rm -ti code_review python csv_sum.py
+# mount current folder to docker container volume in order to let service read data.tgz
+	docker run --rm -v .:/data code_review
 .PHONY: test

@@ -1,0 +1,3 @@
+# versions should be specified
+numpy==1.25
+pandas==2.0
